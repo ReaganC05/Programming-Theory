@@ -13,6 +13,8 @@ public class MainUIHandler : MonoBehaviour
 
         if (!string.IsNullOrWhiteSpace(fox.fox_name))
         {
+            PlayerPrefs.SetString("FoxName", fox.fox_name);
+            PlayerPrefs.Save();
             Debug.Log("Player Name Saved: " + fox.fox_name);
         }
         else
